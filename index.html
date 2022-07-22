@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHANGE IMG ON HOVER</title>
+    <style>
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+    .main{
+        width: 100%;
+        height: 100vh;
+        background-color: #222;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+
+    }
+    .main .box{
+        width: 500px;
+
+    }
+    .main .box img{
+        width: 100%;
+        border-radius: 20px;
+    }
+    .main .box .thumbnail {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .main .box .thumbnail img{
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <div class="mainimg">
+                <img src="./image/image-1.jpg" alt="" id="mainImg">
+            </div>
+            <div class="thumbnail">
+                <img src="./image/image-1.jpg" alt="" onmouseover="changeImg1()">
+                <img src="./image/image-2.jpg" alt="" onmouseover="changeImg2()">
+                <img src="./image/image-3.jpg" alt="" onmouseover="changeImg3()">
+                <img src="./image/image-4.jpg" alt="" onmouseover="changeImg4()">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeImg1(){
+            document.getElementById("mainImg").setAttribute("src","./image/image-1.jpg");
+        }
+        function changeImg2(){
+            document.getElementById("mainImg").setAttribute("src","./image/image-2.jpg");
+        }
+        function changeImg3(){
+            document.getElementById("mainImg").setAttribute("src","./image/image-3.jpg");
+        }
+        function changeImg4(){
+            document.getElementById("mainImg").setAttribute("src","./image/image-4.jpg");
+        }
+    </script>
+</body>
+</html>
